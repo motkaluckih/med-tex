@@ -1,0 +1,59 @@
+// .button ====================================================================================================
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40px;
+	border-radius: 0;
+	cursor: pointer;
+	color: $color-light;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color $transition;
+
+	&:hover,
+	&:active {
+		background-color: $color-second-dark;
+	}
+
+	&:focus-visible {
+		background-color: $color-second-default;
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	&:disabled {
+		opacity: 0.45;
+	}
+
+	&--main {
+		padding: 15px 29px;
+		background-color: $color-green-200;
+		@include fontCompressor(14px, 500, 1, 0.2px);
+	}
+
+	&--secondary {
+		padding: 19px 43px;
+		background-color: $color-green-200;
+		@include fontCompressor(18px, 600, 1, 0.2px);
+		@include media-breakpoint-down(xl) {
+			padding: 16px 17px;
+			@include fontCompressor(14px, 600, 1, 0px);
+		}
+	}
+
+	&--mob {
+		@include media-breakpoint-down(xl) {
+			padding: 19px 43px;
+		}
+	}
+	
+
+	&-page {
+		@include btn-page(14px 27px, 50px, $color-green-700);
+        @include fontCompressor(14px, 600, 20px, 0.2px);
+        color: $color-light;
+	}
+}

@@ -1,0 +1,29 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "Контакты";
+  - let currentPage = "contacts";
+  - let listPage = ["Главная /", "Контакты"]
+
+block content
+
+  section.contacts.d-flex.flex-lg-column.flex-column-reverse
+    .contacts-map
+        .conatainer
+            .row
+                .col-12.col-lg-12.contacts-map__block.d-flex.align-items-center.justify-content-center
+                    img(src="img/location.jpg", alt="Расположение организации")
+    .contacts-list
+        .container
+          .row.contacts-list__container
+              .col-12
+                  .row.d-flex.flex-column.flex-lg-row.justify-content-between
+                      .col-12.col-lg-3.contacts-list__item.d-flex.flex-column.align-items-center.align-items-lg-start
+                        h3 Мы находимся
+                        p Петрозаводск, ул. Пирогова, 6а
+                      .col-12.col-lg-5.contacts-list__item.contacts-list__item--two.d-flex.align-items-center.flex-column
+                        h3 Звоните нам
+                        a(href="tel:88142764301") 8 (8142) 76-43-01
+                      .col-12.col-lg-3.contacts-list__item.d-flex.align-items-center.flex-column
+                        h3 Пишите нам
+                        a(href="mailto:torg@medtech-karelia.ru") torg@medtech-karelia.ru

@@ -1,0 +1,28 @@
+-
+    var menuList = [
+        {"title": "Главная", "url": "./index.html", "pageName": "index"},
+        {"title": "Новости", "url": "./news.html", "pageName": "news"},
+        {"title": "Услуги", "url": "./services.html", "pageName": "services"},
+        {"title": "Магазин", "url": "./shop.html", "pageName": "shop"},
+        {"title": "О нас", "url": "./about.html", "pageName": "about"},
+        {"title": "Контакты", "url": "./contacts.html", "pageName": "contacts"},
+    ]
+
+.sidebar.sidebar-close#sidebar
+    .container-fluid
+        .row.sidebar-wrap
+            .col-12.d-flex.p-0 
+                a.header-mobile__btn.green(href="tel:88142764301") 8 (8142) 76-43-01
+                button.header-mobile__btn.header-mobile__btn-color(data-fancybox='' data-animation-duration='50' data-src='#fastOrder' href='javascript:;') Заказать звонок
+            .col-12.sidebar-top__close.d-flex.justify-content-between
+                a(href="#")
+                    img.logo-sidebar(src="img/logo-footer.svg", alt="PANEX")
+                a#closeSidebar(href="javascript:void(0);")
+                    +icon('close')
+        .row 
+            #mobileNav
+                ul.menu 
+                        each link in menuList
+                            li.menu__item(class=(link.pageName === currentPage ? "active" : undefined))
+                                a(href=link.url) #{link.title} 
+                                +icon('menu-arrow')

@@ -1,0 +1,20 @@
+if currentPage === "repair"
+    section.pages
+            .container
+                .row.pages__wrapper.pages__wrapper_padding-x
+                        .col-12.d-flex.flex-column-reverse.flex-xl-column.align-items-center.align-items-xl-start
+                                ul.d-flex.flex-wrap.justify-content-xl-start.justify-content-center 
+                                    each link in listPage
+                                            li.pages__item
+                                                a #{link} 
+                                h1.pages__title.pages__title-small #{pageTitle}
+else
+    section.pages
+        .container
+            .row.pages__wrapper
+                    .col-12.d-flex.flex-column-reverse.flex-xl-column.align-items-center.align-items-xl-start
+                            ul.d-flex.flex-wrap.justify-content-xl-start.justify-content-center 
+                                each link in listPage
+                                        li
+                                            a #{link} 
+                            h1.pages__title #{pageTitle}

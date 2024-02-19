@@ -1,0 +1,33 @@
+.advantage {
+    background: url("../img/bg-trust.jpg") no-repeat center/ cover;
+    color: $color-light;
+    
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+    &__wrapper {
+        position: relative;
+        padding: 44px 0;
+        @include media-breakpoint-down(lg) {
+            padding: 55px 12px;
+        }
+    }
+
+    ul {
+        @include list-reset;
+        padding: 0;
+    }
+    li {
+        gap: 23px;
+        padding: 0px;
+        cursor: pointer;
+        @include fontCompressor(48px, 600, 1, 0px);
+        transition: background-color $transition;
+    }
+
+    span {
+        width: 100%;
+        @include fontCompressor(24px, 500, 1, 0px);
+        text-align: center;
+    }
+}

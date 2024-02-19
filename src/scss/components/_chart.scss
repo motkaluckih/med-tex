@@ -1,0 +1,98 @@
+.chart {
+    color: $color-light;
+    @include media-breakpoint-down(xl) {
+        padding-bottom: 0px;
+    }
+    &__position {
+        position: relative;
+    }
+	&__time {
+		display: flex;
+		max-width: 165px;
+		width: 100%;
+		@include media-breakpoint-down(xl) {
+			max-width: 90px;
+		}
+	}
+
+	&__solid-line {
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: $color-light;
+	}
+
+    h3 {
+        @include fontCompressor(20px, 600, 1, 0.2px);
+    }
+    p {
+        margin: 0;
+        @include fontCompressor(14px, 500, 23px, 0);
+    }
+	
+	ul {
+		&.chart__list {
+			margin-top: -200px;
+			@include media-breakpoint-down(xl) {
+				margin-top: -78px;
+				gap: 15px;
+			}
+		}
+		@include list-reset;
+		li {
+			padding: 39px 43px 21px 41px;
+			gap: 19px; 
+			@include media-breakpoint-down(xl) {
+				padding: 19px 30px 15px;
+			}
+		}
+		.icon {
+			width: 54px;
+			height: 54px;
+
+			@include media-breakpoint-down(xl) {
+				width: 39px;
+				height: 39px;
+			}
+		}
+		svg {
+			@include svg-converter($color-light);
+		}
+    }
+
+	 &__item {
+		&_bg-green-200 {
+			background-color: $color-green-200;
+		}
+		&_bg-green-300{
+			background-color: $color-green-300;
+		}
+		&_bg-gray-100 {
+			background-color: $color-gray-100;
+			color: $color-dark-300;
+			.icon {
+				fill: $color-dark-300;
+				stroke: $color-dark-300;
+			}
+			.chart__solid-line {
+				background-color:  $color-dark-300;
+			}
+		}
+	}
+
+    ul &__mode {
+		gap: 9px;
+        li {
+            padding: 0;
+            gap: 44px;
+            @include fontCompressor(14px, 500, 24px, 0.2px);
+            color: $color-dark-200;
+            @include media-breakpoint-down(xl) {
+                padding: 0;
+            }
+        }
+        span {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.shop {
+    &__wrapper{
+        padding: 0 12px;
+    }
+
+    &__left {
+        padding-top: 30px;
+        overflow: hidden; 
+        @include media-breakpoint-down(xl) {
+            padding: 0;
+            padding-top: 0;
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+        }
+    }
+    ul {
+        @include list-reset;
+        li {
+            padding: 0;
+            width: 100%;
+            max-height: 346px;
+        }
+    }
+    h2 {
+        margin-bottom: 25px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        @include media-breakpoint-down(lg) {
+            max-height: 264px;
+        }
+    }
+    &__slider {
+        padding: 0;
+        padding-left: 11px;
+        overflow: hidden; 
+        @include media-breakpoint-down(xl) {
+            padding-left: 0;
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+            padding-top: 20px;
+        }
+    }
+    &__mob {
+        padding: 0;
+    }
+    .slider-similar__nav {
+        @include media-breakpoint-down(lg) {
+            flex-direction: initial;
+            padding-top: 54px;
+        }
+    }
+}

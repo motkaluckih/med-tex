@@ -1,0 +1,43 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "Услуги";
+  - let currentPage = "services";
+  - let listPage = ["Главная /", "Услуги"]
+
+block content
+
+  section.section.services-card 
+      .container 
+              .row
+                  .col-12.services-card__wrapper
+                      ul.row.d-flex.flex-lg-wrap.flex-lg-row.flex-column
+                          li.col-12.col-lg-6
+                              img(src="img/services-card1.jpg", alt="Человек чинит прибор")
+                              .services-card__block.d-flex.flex-column
+                                  h3 Обслуживание и ремонт  медтехники
+                                  p Рентген-диагностической аппаратуры, физиотерапевтической аппаратуры, кислородных систем
+                                  .d-flex.justify-content-lg-start.justify-content-center.pt-2  
+                                      a.button.button--secondary.button--mob(href="#") Подробнее
+                          li.col-12.col-lg-6
+                              img(src="img/services-card2.jpg", alt="Человек чинит прибор")
+                              .services-card__block.d-flex.flex-column
+                                  h3 Поставка медицинского оборудования
+                                  p Оснащение государственных и частных лечебных заведений современной медицинской мебелью и оборудованием
+                                  .d-flex.justify-content-lg-start.justify-content-center.pt-2  
+                                      a.button.button--secondary.button--mob(href="#") Подробнее
+                          li.col-12.col-lg-6
+                              img(src="img/services-card2.jpg", alt="Человек чинит прибор")
+                              .services-card__block.d-flex.flex-column
+                                  h3 Поставка медицинского оборудования
+                                  p Оснащение государственных и частных лечебных заведений современной медицинской мебелью и оборудованием
+                                  .d-flex.justify-content-lg-start.justify-content-center.pt-2  
+                                      a.button.button--secondary.button--mob(href="#") Подробнее
+                          li.col-12.col-lg-6
+                              img(src="img/services-card1.jpg", alt="Человек чинит прибор")
+                              .services-card__block.d-flex.flex-column
+                                  h3 Обслуживание и ремонт  медтехники
+                                  p Рентген-диагностической аппаратуры, физиотерапевтической аппаратуры, кислородных систем
+                                  .d-flex.justify-content-lg-start.justify-content-center.pt-2  
+                                      a.button.button--secondary.button--mob(href="#") Подробнее
+                      

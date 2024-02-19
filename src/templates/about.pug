@@ -1,0 +1,36 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "О нас";
+  - let currentPage = "about";
+  - let listPage = ["Главная /", "О нас"]
+
+block content
+
+    section.section.description
+        .container
+            .row.description__wrapper.d-flex.justify-content-between.flex-lg-row.flex-column
+                .col-12.col-lg-6.p-0.slider.description__slider
+                    ul.slider-wrapper.d-flex.flex-row
+                        li 
+                            img.description__img.description__img_size(src="img/repair2.jpg", alt="Стоматологический прибор")
+                        li 
+                            img.description__img.description__img_size(src="img/repair2.jpg", alt="Стоматологический прибор")
+                        li 
+                            img.description__img.description__img_size(src="img/repair2.jpg", alt="Стоматологический прибор")
+                    .row 
+                        .col-12.description__slider-similar.slider-similar
+                            .d-flex.description__nav.slider-similar__nav.slider-similar__nav_desc.d-flex.justify-content-center.align-items-center
+                            .description__btn-dom.slider-nav.slider-nav__inner.slider-similar__btn-dom.slider-similar__btn-dom_xl-activ.d-flex-gap
+                .col-lg-6.col-md-12.description__right.d-flex.flex-column.pt-lg-5     
+                    h2.section-title О нас
+                    p ГУП РК «Медтехника» - комплексное оснащение государственных и частных лечебных заведений современной медицинской мебелью, общего и специального назначения, а также лабораторной мебелью, медицинским оборудованием.
+                    .description__text.d-none.d-lg-flex.flex-column.mb-0 
+                        p Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление обеспечивает актуальность переосмысления внешнеэкономических политик.
+                        p.d-none.d-lg-flex Мы это - комплексное оснащение государственных и частных лечебных заведений современной медицинской мебелью, общего и специального назначения, а также лабораторной мебелью, медицинским оборудованием.
+                .col-12.description__mob.d-lg-none
+                        p Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление обеспечивает актуальность переосмысления внешнеэкономических политик.
+    include components/_why-we
+    include components/_buy
+    include components/_request
+

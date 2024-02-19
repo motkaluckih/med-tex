@@ -1,0 +1,73 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "Новости";
+  - let currentPage = "news";
+  - let listPage = ["Главная /", "Новости"]
+
+block content
+
+    .news.section
+        .container 
+            .row
+                .col-12.news__wrapper
+                        .row.news__list.news__list_padding.news__list_gap.d-flex.flex-lg-wrap.flex-lg-row.flex-column
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news1.jpg", alt="Перчатки нитриловые")
+                                h3 Перчатки нитриловые и латексные в наличии
+                                p Розничная и оптовая продажа латексных и нитриловых перчаток в ГУП РК Медтехника
+                                .news__position.d-flex.flex-column.align-items-center 25
+                                    span.news__text апреля
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news2.png", alt="Аптечки ФЭСТ")
+                                h3 Аптечки ФЭСТ в наличии
+                                p Розничная и оптовая продажа аптечек ФЭСТ в ГУП РК Медтехника
+                                .news__position.d-flex.flex-column.align-items-center 7
+                                    span.news__text марта
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news3.jpg", alt="Фото вируса")
+                                h3 Обращение министра здравоохранения республики Карелия
+                                p Обращение Михаила Охотникова
+                                .news__position.d-flex.flex-column.align-items-center 13
+                                    span.news__text марта
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news2.png", alt="Аптечки ФЭСТ")
+                                h3 Аптечки ФЭСТ в наличии
+                                p Розничная и оптовая продажа аптечек ФЭСТ в ГУП РК Медтехника
+                                .news__position.d-flex.flex-column.align-items-center 7
+                                    span.news__text марта
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news1.jpg", alt="Перчатки нитриловые")
+                                h3 Перчатки нитриловые и латексные в наличии
+                                p Розничная и оптовая продажа латексных и нитриловых перчаток в ГУП РК Медтехника
+                                .news__position.d-flex.flex-column.align-items-center 25
+                                    span.news__text апреля
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news3.jpg", alt="Фото вируса")
+                                h3 Обращение министра здравоохранения республики Карелия
+                                p Обращение Михаила Охотникова
+                                .news__position.d-flex.flex-column.align-items-center 13
+                                    span.news__text марта
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news3.jpg", alt="Фото вируса")
+                                h3 Обращение министра здравоохранения республики Карелия
+                                p Обращение Михаила Охотникова
+                                .news__position.d-flex.flex-column.align-items-center 13
+                                    span.news__text марта
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news2.png", alt="Аптечки ФЭСТ")
+                                h3 Аптечки ФЭСТ в наличии
+                                p Розничная и оптовая продажа аптечек ФЭСТ в ГУП РК Медтехника
+                                .news__position.d-flex.flex-column.align-items-center 7
+                                    span.news__text марта
+                            a.news__item.d-flex.col-12.col-lg-4.flex-column(href="#") 
+                                img(src="img/news1.jpg", alt="Перчатки нитриловые")
+                                h3 Перчатки нитриловые и латексные в наличии
+                                p Розничная и оптовая продажа латексных и нитриловых перчаток в ГУП РК Медтехника
+                                .news__position.d-flex.flex-column.align-items-center 25
+                                    span.news__text апреля
+                .col-12.news__page-navigation.d-flex.justify-content-center.justify-content-lg-end
+                    button 1
+                    button.activ 2
+                    button 3
+                        

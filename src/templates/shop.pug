@@ -1,0 +1,45 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "Магазин";
+  - let currentPage = "shop";
+  - let listPage = ["Главная /", "Магазин"]
+
+block content
+
+  section.section.section__lg-pb-none.shop
+      .container
+            .row.shop__wrapper.d-flex.justify-content-center.justify-content-lg-between.flex-lg-row.flex-column
+                    .col-lg-4.col-md-12.shop__left.d-flex.flex-column.ps-lg-0    
+                        h2.section-title Магазин ГУП РК
+                        p ГУП РК «Медтехника» - комплексное оснащение государственных и частных лечебных заведений современной медицинской мебелью, общего и специального назначения, а также лабораторной мебелью, медицинским оборудованием. 
+                        .shop__text.d-none.d-lg-flex.flex-column 
+                            p Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление обеспечивает актуальность переосмысления внешнеэкономических политик.
+                    .col-12.col-lg-8.slider.shop__slider
+                        ul.slider-wrapper.d-flex.flex-row
+                            li
+                                img(src="img/shop1.jpg", alt="Стоматологическое кресло")
+                            li
+                                img(src="img/shop2.jpg", alt="Стоматологическое кресло")
+                            li
+                                img(src="img/shop1.jpg", alt="Стоматологическое кресло")
+                        .d-flex.shop__slider-similar.slider-similar.slider-similar__nav.slider-similar__nav_mob.d-flex.justify-content-center.align-items-center.d-lg-none
+                            .shop__dots-inner.slider-dots
+                            .shop__btn-dom.slider-nav.slider-nav__inner.slider-similar__btn-dom.d-flex-gap
+                    .col-12.shop__mob.d-lg-none
+                            p Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление обеспечивает актуальность переосмысления внешнеэкономических политик.
+  section.section.section__pb120.company
+        .container
+                .row.company__wrapper.d-flex.flex-column.flex-lg-row
+                      .col-12.col-lg-8.company__img-block.d-flex.p-0
+                          img.company__img.company__img_lg-size(src="img/shop3.jpg", alt="расположение организации на карте")
+                      .col-lg-4.col-12.company__right.d-flex.flex-column    
+                              h2.section-title.section-title_line-height.mb-4.pt-3 В наличии и под заказ в нашем магазине можно преобрести также: 
+                              ul.row.d-flex.flex-wrap 
+                                  li.col-12 Средства безводной гигиены
+                                  li.col-12  Диагностические экспресс-тесты
+                                  li.col-12 Тонометры
+                                  li.col-12  Аксессуары к тонометрам
+  include components/_why-we
+  include components/_buy
+  include components/_request

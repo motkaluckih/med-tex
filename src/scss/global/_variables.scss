@@ -1,0 +1,60 @@
+// * ==================================================================================================
+// * VARIABLES
+// * ==================================================================================================
+
+// Fonts ==============================================================================================
+$font-primary: "Montserrat", sans-serif;
+$font-intro: "Intro", sans-serif;
+
+// Colors =============================================================================================
+$color-light: #fff;
+
+$color-dark-200: #666;
+$color-dark-300: #333232;
+$color-black: #000;
+$color-dark: #2e3237;
+$color-dark-056: rgba($color-dark, 0.56);
+$color-dark-023: rgba($color-dark, 0.23);
+
+$color-green-200: #0CA750;
+$color-green-300: #3DB973;
+$color-green-400: #0A8640;
+$color-green-700: #3AAA35;
+
+$color-gray-100: #f8f8ff;
+$color-gray-200:#EAEAEA;
+$color-gray-300: #C0C0C0;
+$color-gray-400: #B2B2B2;
+$colorGraiOpaciity: #D6DDE4;
+$colorBgHeader:#F5F7FA;
+$color-gray-op3:#f5f7f940;
+$colorRgbaOpacity: rgba(214, 221, 228, 0.60);
+$colorGrayOpacity30:#B9BCC04D;
+
+$color-primary-default: #292d78;
+$color-second-default: #00a3da;
+$color-second-dark: #0078b3;
+$colorBlue: #1A2141;
+$colorOrange: #E94E1B;
+
+// Properties =========================================================================================
+$transition: 0.3s ease-out;
+$radius: 14px;
+//border
+$border-gray-200: 1px solid rgba(255, 255, 255, 0.15);
+$borderGray400: 1px solid $color-gray-400;
+$borderDark200: 1px solid $color-dark-200;
+$borderGray: 1px solid $colorGraiOpaciity;
+
+// Mixins =============================================================================================
+@mixin body {
+  color: $color-dark-300;
+  background-color: $color-light;
+  
+  @include body-text;
+}
+
+@mixin body-text {
+  font-family: $font-primary;
+  @include fontCompressor(14px, 500, 23px, 0);
+}

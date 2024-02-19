@@ -1,0 +1,39 @@
+.top-main-page
+    if currentPage === "index"
+        .bg-wrapper-main  
+            include ../components/_header
+            include ../components/page/_main-page
+    else 
+        .bg-wrapper-page  
+            include ../components/_header
+            include ../components/page/_page
+if currentPage === "index"
+    section.chart
+        .container
+            .row
+                .col-12.chart__position
+                        ul.chart__list.row.d-flex.flex-column.flex-xl-row 
+                            li.chart__item.chart__item_bg-green-200.col-12.col-xl-4.d-flex.flex-column 
+                                +icon('key')
+                                span.chart__solid-line
+                                h3 Обслуживание и ремонт  медтехники
+                                p Рентген-диагностической аппаратуры, физиотерапевтической аппаратуры, кислородных систем
+                            li.chart__item.chart__item_bg-green-300.col-12.col-xl-4.d-flex.flex-column 
+                                +icon('delivery')
+                                span.chart__solid-line
+                                h3 Поставка медицинского оборудования
+                                p Оснащение государственных и частных лечебных заведений современной медицинской мебелью и оборудованием
+                            li.chart__item.chart__item_bg-gray-100.col-12.col-xl-4.d-flex.flex-column 
+                                +icon('watch')
+                                span.chart__solid-line
+                                h3 Часы работы
+                                ul.chart__mode.d-flex.flex-column 
+                                    li.d-flex.justify-content-between 
+                                        span Пн - Чт
+                                        span.chart__time 08:30 - 16:30
+                                    li.d-flex.justify-content-between 
+                                        span.d-flex.align-items-center Пятница
+                                        span.chart__time 08:30-15:00 (Перерыв с 12:00 - 12:30)
+                                    li.d-flex.justify-content-between 
+                                        span Сб, Вс
+                                        span.chart__time Выходной 

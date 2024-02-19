@@ -1,0 +1,48 @@
+// .request ====================================================================================================
+.request {
+  position: relative;
+  padding: 120px 0;
+  color: $color-light;
+  background-color: $color-green-200;
+
+  @include media-breakpoint-down(lg) {
+    padding: 69px 0;
+  }
+  h2 {
+    margin-bottom: 27px;
+    color: $color-light;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 15px;
+    }
+  }
+
+  button {
+    color:$color-light;
+    @include fontCompressor(24px, 400, 1, 0px);
+    text-align: left;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 80px;
+        @include fontCompressor(14px, 400, 20px, 0.2px);
+    }
+  }
+
+  svg {
+		@include svg-converter($color-light);
+    stroke-opacity: 0.5;
+	}
+	.icon {
+    margin-right: calc(68/1200*100%);
+		width: 86px;
+		height: 86px;
+    @include media-breakpoint-down(lg) {
+      margin-right: initial;
+      margin-bottom: 23px;
+      width: 64px;
+		  height: 64px;
+    }
+	}
+  a {
+    @include fontCompressor(30px, 500, 1, 0px);
+    text-decoration: none;
+  }
+}

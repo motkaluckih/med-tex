@@ -1,0 +1,38 @@
+extends layouts/_default
+
+block vars
+    - let pageTitle = "Обслуживание и ремонт  медтехники";
+    - let currentPage = "repair";
+    - let listPage = ["Главная /", "Услуги /", "Обслуживание и ремонт  медтехники"]
+
+block content
+    section.section.description.slider-similar
+        .container
+            .row.description__wrapper.d-flex.justify-content-between.flex-lg-row.flex-column
+                .col-12.col-lg-6.p-0.slider.description__slider
+                    ul.slider-wrapper.d-flex.flex-row
+                        li 
+                            img.description__img(src="img/repair.jpg", alt="Стоматологический прибор")
+                        li 
+                            img.description__img(src="img/repair.jpg", alt="Стоматологический прибор")
+                        li 
+                            img.description__img(src="img/repair.jpg", alt="Стоматологический прибор")
+                    .d-flex.description__nav.description__nav_pt-65.slider-similar__nav.slider-similar__nav_desc.justify-content-center.align-items-center
+                        .description__dots-inner.slider-dots
+                        .description__btn-dom.slider-nav.slider-nav__inner.slider-similar__btn-dom.d-flex-gap
+                .col-lg-6.col-md-12.d-flex.description__right.flex-column    
+                    h2.section-title Обслуживание и ремонт  медтехники
+                    p ГУП РК «Медтехника» - комплексное оснащение государственных и частных лечебных заведений современной медицинской мебелью, общего и специального назначения, а также лабораторной мебелью, медицинским оборудованием. 
+                    .description__text.d-none.d-lg-flex.flex-column 
+                        p Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление обеспечивает актуальность переосмысления внешнеэкономических политик.
+                        p Мы это - комплексное оснащение государственных и частных лечебных заведений современной медицинской мебелью, общего и специального назначения, а также лабораторной мебелью, медицинским оборудованием. 
+                    .description__btn-bottom.d-flex.justify-content-center.justify-content-lg-start.align-items-center
+                        a.button.button--secondary.d-none.d-lg-block(href="#") Подробнее
+                .col-12.description__mob.d-lg-none
+                        p Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление обеспечивает актуальность переосмысления внешнеэкономических политик.
+                        p Мы это - комплексное оснащение государственных и частных лечебных заведений современной медицинской мебелью, общего и специального назначения, а также лабораторной мебелью, медицинским оборудованием. 
+    .section.section__pb120
+        include components/_why-we
+    include components/_services-slider
+    include components/_partners
+    include components/_request

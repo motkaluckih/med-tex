@@ -1,0 +1,37 @@
+.why-we {
+    color: $color-dark-300;
+    &__list {
+        padding: 0 12px;
+        gap: 15px;
+
+    }
+    &__item {
+        padding: 25px 18px 32px ;
+        max-width: calc(370/1200*100%);
+        background-color: $color-gray-100;
+
+        &_border {
+            padding: 0;
+            padding-top: 50px;
+            border-top: $borderGray400;
+        }
+        &_bg-white {
+            background-color: $color-light;
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 25px 18px;
+            max-width: 100%;
+            min-height: 165px;
+            border-top: none;
+            background-color: $color-gray-100;
+        }
+    }    
+    h3 {
+        margin-bottom: 15px;
+        @include fontCompressor(24px, 600, 1, 0);
+    }
+
+    p {
+        color: $color-dark-200;
+    }
+}

@@ -1,0 +1,232 @@
+// .slider ====================================================================================================
+.slider {
+  position: relative;
+
+  .owl-stage {
+    display: flex;
+  }
+    &__slider {
+      padding: 0;
+      overflow: hidden;
+    }
+}
+
+.slider-wrapper {
+  touch-action: manipulation;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+// .slider-dots ====================================================================================================
+.slider-dots {
+  // position: absolute;
+  // bottom: 50px;
+  // left: 0;
+  // z-index: 2;
+  display: flex;
+  gap: 8px;
+  // width: 100%;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .owl-dot {
+    display: block;
+    width: 7px;
+    height: 7px;
+    // margin-right: 7px;
+    // margin-left: 7px;
+    background-color: $colorGrayOpacity30;
+    border-radius: 50%;
+    transition: transform $transition;
+
+    &.active {
+      background-color:$colorBlue;
+    }
+  }
+}
+
+// .slider-navz ====================================================================================================
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+
+  .container {
+    max-width: 1406px;
+  }
+
+  // .slider-nav__inner
+  &__inner {
+      position: absolute;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      right: calc(86/1440*100%);
+
+      @include media-breakpoint-down(lg) {
+        bottom: 15px;
+        right: initial;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 67px;
+      }
+  }
+
+  .owl-prev,
+  .owl-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    @include media-breakpoint-down(lg) {
+      width: 53px;
+      height: 53px;
+      background-color: $color-gray-op3;
+      border: 1px solid white;
+    }
+
+    .icon {
+      width: 78px;
+      height: 78px;
+      @include media-breakpoint-down(lg) {
+        width: 36px;
+        height: 36px;
+      }
+    }
+    svg {
+      @include svg-converter($color-light);
+    }
+  }
+
+  .owl-prev {
+    left: 0;
+
+    .icon {
+      margin-right: 2px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .owl-next {
+    right: 0;
+  }
+
+  &--blue {
+    .owl-next,
+    .owl-prev {
+      color: $color-light;
+      background-color: $color-second-default;
+    }
+  }
+}
+
+// .slider-similar ====================================================================================================
+.slider-similar {
+      &__slider {
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      &__btn-dom {
+        display: flex;
+
+          &.slider-nav__inner {
+            position: absolute;
+            width: 100%;
+            height: min-content;
+            left: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 10px;
+  
+                @include media-breakpoint-down(lg) {
+                  position: static;
+                  bottom: 15px;
+                  right: initial;
+                  width: 100%;
+                  flex-direction: row;
+                  justify-content: center;
+                  gap: 67px;
+                }  
+          }
+
+            &.slider-nav {
+                @include media-breakpoint-down(lg) {
+                  padding-top: 0px;
+                }
+            }
+            &.slider-nav .owl-prev,
+            &.slider-nav .owl-next {
+                  width: 67px;
+                  height: 67px;
+                  border: 1px solid $color-light;
+                  transform: initial;     
+                  background-color: #c4c4c485;
+                  @include media-breakpoint-down(lg) {
+                      width: 53px;
+                      height: 53px;
+                  }
+                  
+                    @include media-breakpoint-down(lg) {
+                        background-color: #c4c4c42b;
+                        border: $borderDark200;
+                        transform: initial;
+                    } 
+                  .icon {
+                      width: 33px;
+                      height: 33px;
+                      @include svg-converter($color-light);
+                        @include media-breakpoint-down(lg) {
+                          width: 36px;
+                          height: 36px;
+                          @include svg-converter($color-dark-200);
+                        }
+                  }
+                    &  svg {
+                      width: 53px;
+                      height: 53px;
+                        @include svg-converter($color-dark-200);
+                    }
+            }
+        }
+
+    &__nav { 
+      &_decs {
+          @include media-breakpoint-down(lg) {
+              flex-direction: initial;
+              padding-top: 61px;
+          }
+      }          
+      
+      &_mob {
+        .slider-similar__btn-dom{
+          display: none;
+
+          @include media-breakpoint-down(lg) {
+            display: flex;
+          }
+        }
+          @include media-breakpoint-down(lg) {
+              padding-top: 20px;
+              padding-top: 26px;
+              flex-direction: column;
+            }
+        }
+    }
+  .slider-dots {
+      @include media-breakpoint-down(lg) {
+          padding-bottom: 120px;
+      }
+  }
+}

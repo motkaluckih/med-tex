@@ -1,0 +1,46 @@
+.partners {
+    position: relative;
+    padding-top: 78px;
+    padding-bottom: 60px;
+    @include media-breakpoint-down(xl) {
+        padding-bottom: 50px;
+    }
+    .container {
+        max-width: 1325px;
+    }
+    ul {
+        @include list-reset;
+        overflow: hidden;
+    }
+    li {
+        padding: 0;
+        width: calc(180/1295*100%);
+        @include media-breakpoint-down(xl) {
+            width: 100%;
+        }
+    }
+    img {
+        object-fit: cover;
+        height: 100%;
+        @include media-breakpoint-down(xl) {
+            margin: 0 auto;
+        }
+    }
+    .slider-dots {
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 92px;
+        }
+    }
+    .slider-dots .owl-dot {
+        width: 25px;
+        border-radius: 0;
+        background-color: $color-gray-400;
+        &.active {
+            background-color: $color-green-400;
+        }
+    }
+    &__nav {
+        padding-top: 15px;
+    }
+    
+}

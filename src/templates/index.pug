@@ -1,0 +1,86 @@
+extends layouts/_default
+
+block vars
+    - let currentPage = "index";
+    - let pageTitle = "Главная страница";
+
+block content
+
+    section.section.why-we
+        .container
+                .row.why-we__list.d-flex.justify-content-start.justify-content-lg-between
+                    .col-12.col-lg-4.why-we__item.why-we__item_border.why-we__item_bg-white
+                        h2.section-title Почему мы?
+                    .col-12.col-lg-4.why-we__item.why-we__item_border.why-we__item_bg-white
+                        h3 Низкие цены
+                        p Мы работаем с производителями без посредников, только это даёт нам возможность снижать цену до 30%
+                    .col-12.col-lg-4.why-we__item.why-we__item_border.why-we__item_bg-white 
+                        h3 Гарантия качества
+                        p  На каждый товар распространяется гарантия производителя + наша сервисная гарантия
+    include components/_services-slider
+    include components/_partners
+
+    section.section.section__bg-gray.section__lg-pb-none.news
+        .container 
+            .news__top.d-flex.justify-content-center.justify-content-lg-start 
+                h2.section-title Новости
+            .news__slider.slider
+                .row.news__list.slider-wrapper
+                    a.news__item.col-12.flex-column(href="#") 
+                        img.news__img-cover(src="img/news1.jpg", alt="Перчатки нитриловые")
+                        h3 Перчатки нитриловые и латексные в наличии
+                        p Розничная и оптовая продажа латексных и нитриловых перчаток в ГУП РК Медтехника
+                        .news__position.d-flex.flex-column.align-items-center 25
+                            span.news__text апреля
+                    a.news__item.col-12.flex-column(href="#") 
+                        img.news__img-cover(src="img/news2.png", alt="Аптечки ФЭСТ")
+                        h3 Аптечки ФЭСТ в наличии
+                        p Розничная и оптовая продажа аптечек ФЭСТ в ГУП РК Медтехника
+                        .news__position.d-flex.flex-column.align-items-center 7
+                            span.news__text марта
+                    a.news__item.col-12.flex-column(href="#") 
+                        img.news__img-cover(src="img/news3.jpg", alt="Фото вируса")
+                        h3 Обращение министра здравоохранения республики Карелия
+                        p Обращение Михаила Охотникова
+                        .news__position.d-flex.flex-column.align-items-center 13
+                            span.news__text марта
+                .news__btn-bottom.d-flex.justify-content-end
+                    a.button.button--secondary.d-none.d-lg-block(href="./news.html") Смотреть еще
+                .d-flex.news__slider-similar.slider-similar__nav.slider-similar__nav_mob.d-flex.d-lg-none.justify-content-center.align-items-center.pb-5.pb-lg-0
+                            .news__dots-inner.slider-dots
+                            .slider-nav.slider-nav__inner.news__btn-dom.slider-similar__btn-dom.d-flex-gap
+    section.advantage
+        .container
+                .row
+                    .col-12.advantage__wrapper
+                        ul.row.advantage__list.d-flex.justify-content-between.flex-row
+                            li.col-2.d-flex.flex-column.align-items-center 65+ 
+                                    span Лет на рынке
+                            li.col-2.d-flex.flex-column.align-items-center 10000+
+                                    span Товаров для здоровья
+                            li.col-2.d-flex.flex-column.align-items-center 50000+
+                                    span Консультаций специалистов
+                            li.col-2.d-flex.flex-column.align-items-center 100000+
+                                    span  Довольных клиентов
+    section.section.section__bg-gray.company
+        .container
+                .row.company__wrapper.d-flex.justify-content-between
+                        .company__img-block.col-6.p-0
+                            img.company__img(src="img/map.jpg", alt="расположение организации на карте")
+                        .company__right.col-xl-6.col-md-12.d-flex.flex-column    
+                            .company__top.d-flex.justify-content-start.mt-2
+                                h2.section-title О нас
+                            p ГУП РК «Медтехника» - комплексное оснащение государственных и частных лечебных заведений современной медицинской мебелью, общего и специального назначения, а также лабораторной мебелью, медицинским оборудованием. 
+                            .company__bottom
+                                .company__img-mobile
+                                    img.company__img(src="img/map.jpg", alt="расположение организации на карте")
+                                h3 В наличии и под заказ в нашем магазине можно приобрести: 
+                                ul.row.d-flex.flex-wrap 
+                                    li.col-12.col-xl-6  Средства безводной гигиены
+                                    li.col-12.col-xl-5  Тонометры
+                                    li.col-12.col-xl-6  Диагностические экспресс-тесты
+                                    li.col-12.col-xl-5  Аксессуары к тонометрам
+                                .company__btn-dom.d-flex.justify-content-center.justify-content-xl-start.align-items-center
+                                    a.button.button--secondary(href="./services.html") Смотреть услуги
+
+    include components/_request
